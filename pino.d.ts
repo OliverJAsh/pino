@@ -36,7 +36,7 @@ type MixinMergeStrategyFn = (mergeObject: object, mixinObject: object) => object
 
 type CustomLevelLogger<Options> = Options extends { customLevels: Record<string, number> } ? Record<keyof Options["customLevels"], LogFn> : Record<never, LogFn>
 
-interface redactOptions {
+export interface redactOptions {
     paths: string[];
     censor?: string | ((value: any, path: string[]) => any);
     remove?: boolean;
